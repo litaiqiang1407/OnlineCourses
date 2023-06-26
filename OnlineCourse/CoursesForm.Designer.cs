@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoursesForm));
@@ -39,6 +40,7 @@
             btnRefresh = new Button();
             filterCategory = new ComboBox();
             label8 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)CoursesDGV).BeginInit();
             SuspendLayout();
             // 
@@ -114,6 +116,8 @@
             btnSearch.BackgroundImage = (Image)resources.GetObject("btnSearch.BackgroundImage");
             btnSearch.BackgroundImageLayout = ImageLayout.Zoom;
             btnSearch.FlatAppearance.BorderColor = Color.FromArgb(67, 179, 217);
+            btnSearch.FlatAppearance.MouseDownBackColor = Color.White;
+            btnSearch.FlatAppearance.MouseOverBackColor = Color.White;
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Location = new Point(894, 62);
             btnSearch.Name = "btnSearch";
@@ -199,5 +203,6 @@
         private Button btnRefresh;
         private ComboBox filterCategory;
         private Label label8;
+        private System.Windows.Forms.Timer timer1;
     }
 }

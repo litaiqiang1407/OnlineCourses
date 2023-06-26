@@ -22,6 +22,7 @@ namespace OnlineCourse
         private void CoursesForm_Load(object sender, EventArgs e)
         {
             populate();
+            inputSearch.Focus();
         }
 
         public void populate()
@@ -65,6 +66,7 @@ namespace OnlineCourse
         {
             populate();
             inputSearch.Clear();
+            inputSearch.Focus();
         }
 
         public void filterCategorySearch()
@@ -82,6 +84,7 @@ namespace OnlineCourse
         private void filterCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterCategorySearch();
-        }       
+        }
+
     }
 }

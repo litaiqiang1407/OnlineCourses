@@ -95,7 +95,7 @@
             label1.Size = new Size(290, 38);
             label1.TabIndex = 2;
             label1.Text = "TaiKun - CuongLT <3";
-            label1.Click += label1_Click;
+
             // 
             // label2
             // 
@@ -122,7 +122,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
+
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

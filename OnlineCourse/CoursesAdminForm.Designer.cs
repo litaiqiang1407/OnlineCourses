@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoursesAdminForm));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             label2 = new Label();
             btnSearch = new Button();
             inputSearch = new TextBox();
@@ -54,6 +54,7 @@
             label8 = new Label();
             filterCategory = new ComboBox();
             btnRefresh = new Button();
+            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)CoursesDGV).BeginInit();
             SuspendLayout();
             // 
@@ -92,7 +93,6 @@
             inputSearch.Name = "inputSearch";
             inputSearch.Size = new Size(750, 27);
             inputSearch.TabIndex = 0;
-
             inputSearch.KeyDown += inputSearch_KeyDown;
             // 
             // label1
@@ -113,23 +113,23 @@
             CoursesDGV.BackgroundColor = Color.WhiteSmoke;
             CoursesDGV.BorderStyle = BorderStyle.None;
             CoursesDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle1.SelectionForeColor = Color.DimGray;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle5.SelectionForeColor = Color.DimGray;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             CoursesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            CoursesDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            CoursesDGV.DefaultCellStyle = dataGridViewCellStyle6;
             CoursesDGV.EnableHeadersVisualStyles = false;
             CoursesDGV.GridColor = Color.FromArgb(67, 179, 217);
             CoursesDGV.Location = new Point(400, 161);
@@ -137,22 +137,22 @@
             CoursesDGV.Name = "CoursesDGV";
             CoursesDGV.ReadOnly = true;
             CoursesDGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            CoursesDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            CoursesDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             CoursesDGV.RowHeadersVisible = false;
             CoursesDGV.RowHeadersWidth = 51;
             CoursesDGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.ForeColor = Color.Gray;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(134, 223, 255);
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dataGridViewCellStyle8.ForeColor = Color.Gray;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(134, 223, 255);
+            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
+            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle8;
             CoursesDGV.RowTemplate.Height = 29;
             CoursesDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CoursesDGV.Size = new Size(700, 410);
@@ -167,7 +167,7 @@
             btnCreate.FlatStyle = FlatStyle.Flat;
             btnCreate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCreate.ForeColor = Color.White;
-            btnCreate.Location = new Point(48, 530);
+            btnCreate.Location = new Point(48, 484);
             btnCreate.Margin = new Padding(3, 10, 3, 3);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(100, 40);
@@ -184,7 +184,7 @@
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(154, 530);
+            btnUpdate.Location = new Point(154, 484);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(100, 40);
             btnUpdate.TabIndex = 15;
@@ -200,7 +200,7 @@
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(260, 530);
+            btnDelete.Location = new Point(260, 484);
             btnDelete.Margin = new Padding(3, 20, 20, 20);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(100, 40);
@@ -223,7 +223,7 @@
             // inputID
             // 
             inputID.BackColor = Color.FromArgb(224, 224, 224);
-            inputID.Location = new Point(48, 180);
+            inputID.Location = new Point(50, 180);
             inputID.Name = "inputID";
             inputID.Size = new Size(312, 27);
             inputID.TabIndex = 1;
@@ -232,7 +232,7 @@
             // inputName
             // 
             inputName.BackColor = Color.FromArgb(224, 224, 224);
-            inputName.Location = new Point(48, 253);
+            inputName.Location = new Point(50, 243);
             inputName.Name = "inputName";
             inputName.Size = new Size(312, 27);
             inputName.TabIndex = 2;
@@ -242,7 +242,7 @@
             // 
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(67, 179, 217);
-            label4.Location = new Point(48, 220);
+            label4.Location = new Point(50, 210);
             label4.Name = "label4";
             label4.Size = new Size(100, 30);
             label4.TabIndex = 19;
@@ -252,7 +252,7 @@
             // inputCategory
             // 
             inputCategory.BackColor = Color.FromArgb(224, 224, 224);
-            inputCategory.Location = new Point(48, 326);
+            inputCategory.Location = new Point(50, 306);
             inputCategory.Name = "inputCategory";
             inputCategory.Size = new Size(312, 27);
             inputCategory.TabIndex = 3;
@@ -262,7 +262,7 @@
             // 
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(67, 179, 217);
-            label5.Location = new Point(48, 293);
+            label5.Location = new Point(50, 273);
             label5.Name = "label5";
             label5.Size = new Size(100, 30);
             label5.TabIndex = 21;
@@ -272,18 +272,17 @@
             // inputDescription
             // 
             inputDescription.BackColor = Color.FromArgb(224, 224, 224);
-            inputDescription.Location = new Point(50, 399);
+            inputDescription.Location = new Point(50, 369);
             inputDescription.Name = "inputDescription";
             inputDescription.Size = new Size(312, 27);
             inputDescription.TabIndex = 4;
-
             inputDescription.KeyDown += inputDescription_KeyDown;
             // 
             // label6
             // 
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(67, 179, 217);
-            label6.Location = new Point(48, 366);
+            label6.Location = new Point(50, 336);
             label6.Name = "label6";
             label6.Size = new Size(130, 30);
             label6.TabIndex = 23;
@@ -293,7 +292,7 @@
             // inputPrice
             // 
             inputPrice.BackColor = Color.FromArgb(224, 224, 224);
-            inputPrice.Location = new Point(48, 472);
+            inputPrice.Location = new Point(50, 432);
             inputPrice.Name = "inputPrice";
             inputPrice.Size = new Size(312, 27);
             inputPrice.TabIndex = 5;
@@ -303,7 +302,7 @@
             // 
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(67, 179, 217);
-            label7.Location = new Point(48, 439);
+            label7.Location = new Point(50, 399);
             label7.Name = "label7";
             label7.Size = new Size(100, 30);
             label7.TabIndex = 25;
@@ -353,12 +352,30 @@
             btnRefresh.UseVisualStyleBackColor = true;
             btnRefresh.Click += btnRefresh_Click;
             // 
+            // btnReset
+            // 
+            btnReset.AutoSize = true;
+            btnReset.BackColor = Color.FromArgb(67, 179, 217);
+            btnReset.FlatAppearance.BorderSize = 0;
+            btnReset.FlatStyle = FlatStyle.Flat;
+            btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReset.ForeColor = Color.White;
+            btnReset.Location = new Point(154, 531);
+            btnReset.Margin = new Padding(3, 10, 3, 3);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(100, 40);
+            btnReset.TabIndex = 30;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
+            // 
             // CoursesAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1150, 600);
+            Controls.Add(btnReset);
             Controls.Add(btnRefresh);
             Controls.Add(filterCategory);
             Controls.Add(label8);
@@ -413,5 +430,6 @@
         private Label label8;
         private ComboBox filterCategory;
         private Button btnRefresh;
+        private Button btnReset;
     }
 }

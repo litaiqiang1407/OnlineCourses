@@ -17,12 +17,15 @@ namespace OnlineCourse
             InitializeComponent();
         }
 
+        // If you are an Admin, the AdminMainForm will display.
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             AdminMainForm adminMainForm = new AdminMainForm();
             adminMainForm.Show();
         }
 
+
+        // If you are an User, the UserMainForm will display.
         private void btnUser_Click(object sender, EventArgs e)
         {
             UserMainForm userMainForm = new UserMainForm();

@@ -14,6 +14,7 @@ namespace OnlineCourse
 {
     public partial class CoursesAdminForm : Form
     {
+        // Connection with database
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OnlineCourse\OnlineCoursesDB\OnlineCoursesDB.mdf;Integrated Security=True;Connect Timeout=30");
         public CoursesAdminForm()
         {
@@ -22,25 +23,26 @@ namespace OnlineCourse
 
         private void CoursesAdminForm_Load(object sender, EventArgs e)
         {
-            inputSearch.Focus();
-            populate();
+            inputSearch.Focus(); // Focus on Search when CoursesAdminForm display
+            populate(); 
         }
 
+        // Populate a DataGridView(CoursesDGV) control with data from a database table(CoursesTable).
         public void populate()
         {
-            Con.Open();
-            string query = "select * from CoursesTable ";
-            SqlDataAdapter da = new SqlDataAdapter(query, Con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            var ds = new DataSet();
-            da.Fill(ds);
-            CoursesDGV.DataSource = ds.Tables[0];
-            Con.Close();
+            Con.Open(); // Open Connection
+            string query = "select * from CoursesTable "; // It creates a string variable named query that contains the SQL statement to select all records from the CoursesTable table in the database.
+            SqlDataAdapter da = new SqlDataAdapter(query, Con); //It creates a SqlDataAdapter object named "da" that takes the "query" and the "Con" object as parameters. The SqlDataAdapter object is used to execute the query and fill a DataSet object with the results.
+            SqlCommandBuilder builder = new SqlCommandBuilder(da); // It creates a SqlCommandBuilder object named "builder" that takes the "da" object as a parameter. The SqlCommandBuilder object is used to generate SQL commands for updating the database based on the changes made to the DataSet object.
+            var ds = new DataSet(); //It creates a DataSet object named "ds". 
+            da.Fill(ds); // Calls the Fill() method on the "da" object, passing "ds" as a parameter. The Fill() method executes the query and fills the ds object with the data from the database table.
+            CoursesDGV.DataSource = ds.Tables[0]; // It sets the DataSource property of the CoursesDGV object, which is assumed to be a DataGridView control, to the first table in the ds object. This binds the data from the table to the control and displays it in a grid format.
+            Con.Close(); // Close Connection
         }
 
         private void inputID_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) // pressing enter will go to the next input.
             {
                 SendKeys.Send("{TAB}");
             }
@@ -48,7 +50,7 @@ namespace OnlineCourse
 
         private void inputName_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) // pressing enter will go to the next input.
             {
                 SendKeys.Send("{TAB}");
             }
@@ -56,7 +58,7 @@ namespace OnlineCourse
 
         private void inputCategory_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) // pressing enter will go to the next input.
             {
                 SendKeys.Send("{TAB}");
             }
@@ -64,7 +66,7 @@ namespace OnlineCourse
 
         private void inputDescription_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) // pressing enter will go to the next input.
             {
                 SendKeys.Send("{TAB}");
             }
@@ -72,7 +74,7 @@ namespace OnlineCourse
 
         private void inputPrice_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) // pressing enter will trigger the btnCreate.
             {
                 btnCreate_Click(sender, e);
             }
@@ -194,9 +196,24 @@ namespace OnlineCourse
                     MessageBox.Show("Course Deleted Successfully");
                     Con.Close();
                     populate();
+                    inputID.Clear();
+                    inputName.Clear();
+                    inputCategory.Clear();
+                    inputDescription.Clear();
+                    inputPrice.Clear();
+                    inputID.Focus();
                 }
 
             }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            inputID.Clear();
+            inputName.Clear();
+            inputCategory.Clear();
+            inputDescription.Clear();
+            inputPrice.Clear();
+            inputID.Focus();
         }
 
         public void valueSearch()
@@ -228,6 +245,7 @@ namespace OnlineCourse
         {
             populate();
             inputSearch.Clear();
+            inputSearch.Focus();
         }
 
         public void filterCategorySearch()
@@ -245,6 +263,8 @@ namespace OnlineCourse
         private void filterCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterCategorySearch();
-        }  
+        }
+
+
     }
 }

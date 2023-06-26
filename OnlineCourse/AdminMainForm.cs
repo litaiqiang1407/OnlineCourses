@@ -17,41 +17,47 @@ namespace OnlineCourse
             InitializeComponent();
         }
 
+        // Close App
         private void closeApp_Click(object sender, EventArgs e)
         {
-            DialogResult closeMessage = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            // Click on exit button, exit confirmation dialog will appear
+            DialogResult closeMessage = MessageBox.Show("Do you want to exit?", "Exit confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (closeMessage == DialogResult.Yes)
             {
+                // Choose "Yes" --> Exit App
                 Application.Exit();
             }
         }
 
-        private Form activeForm = null;
+        // Display child form
+        private Form activeForm = null; // Set a value indicating that no form is active
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Close(); // It checks if there is already an active form in the panel. If yes, it closes the active form.
             }
-            activeForm = childForm;
+            activeForm = childForm; // It assigns the child form to the activeForm variable, which keeps track of the current form in the panel.
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
+            panelChildForm.Controls.Add(childForm); // It adds the child form to the panel’s Controls collection                                              
+            panelChildForm.Tag = childForm; // Sets its Tag property to the child form object.
+            childForm.BringToFront(); // It brings the child form to the front of the panel and shows it.
             childForm.Show();
         }
-        
+
+        // Display HomeForm
         private void btnHome_Click(object sender, EventArgs e)
         {
             openChildForm(new HomeForm());
         }
 
+        // Display CoursesAdminForm
         private void btnCourses_Click(object sender, EventArgs e)
         {
             openChildForm(new CoursesAdminForm());
-            
+
         }
     }
 }
