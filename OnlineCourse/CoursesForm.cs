@@ -17,6 +17,8 @@ namespace OnlineCourse
         public CoursesForm()
         {
             InitializeComponent();
+            btnEnroll.Visible = false;
+
         }
 
         private void CoursesForm_Load(object sender, EventArgs e)
@@ -86,5 +88,28 @@ namespace OnlineCourse
             filterCategorySearch();
         }
 
+
+        private void CoursesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            panelInforCourse.BackgroundImage = null;
+
+            btnEnroll.Visible = true;
+
+            labelNameText.Text = "Name:";
+            labelCategoryText.Text = "Category:";
+            labelPriceText.Text = "Price:";
+            labelDescriptionText.Text = "Description:";
+
+            valueName.Text = CoursesDGV.SelectedRows[0].Cells[1].Value.ToString();
+            valueCategory.Text = CoursesDGV.SelectedRows[0].Cells[2].Value.ToString();
+            valueDescription.Text = CoursesDGV.SelectedRows[0].Cells[3].Value.ToString();
+            valuePrice.Text = CoursesDGV.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void btnEnroll_Click(object sender, EventArgs e)
+        {
+            LogInForm logInForm = new LogInForm();
+            logInForm.Show();
+        }
     }
 }

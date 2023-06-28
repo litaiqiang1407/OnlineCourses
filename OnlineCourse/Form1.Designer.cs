@@ -51,7 +51,7 @@
             // progressBar
             // 
             progressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            progressBar.AnimationSpeed = 500;
+            progressBar.AnimationSpeed = 1000;
             progressBar.BackColor = Color.Transparent;
             progressBar.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point);
             progressBar.ForeColor = Color.FromArgb(64, 64, 64);
@@ -69,6 +69,7 @@
             progressBar.SecondaryFont = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             progressBar.Size = new Size(80, 80);
             progressBar.StartAngle = 270;
+            progressBar.Step = 20;
             progressBar.Style = ProgressBarStyle.Marquee;
             progressBar.SubscriptColor = Color.FromArgb(166, 166, 166);
             progressBar.SubscriptMargin = new Padding(10, -35, 0, 0);
@@ -95,7 +96,6 @@
             label1.Size = new Size(290, 38);
             label1.TabIndex = 2;
             label1.Text = "TaiKun - CuongLT <3";
-
             // 
             // label2
             // 
@@ -122,7 +122,6 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

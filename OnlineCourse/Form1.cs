@@ -18,6 +18,6 @@ namespace OnlineCourse
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
             }
-        }     
+        }
     }
 }
