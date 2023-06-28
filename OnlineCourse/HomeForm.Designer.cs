@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             pictureBox1 = new PictureBox();
-            label1 = new Label();
             label2 = new Label();
             label4 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -45,16 +45,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(500, 220);
-            label1.Name = "label1";
-            label1.Size = new Size(400, 60);
-            label1.TabIndex = 1;
-            label1.Text = "Learn without limits";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -73,13 +63,22 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(500, 270);
+            label4.Location = new Point(500, 269);
             label4.Name = "label4";
-            label4.Size = new Size(450, 60);
-            label4.TabIndex = 4;
+            label4.Size = new Size(450, 41);
+            label4.TabIndex = 10;
             label4.Text = "Skills for your present  and your future.";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            label4.Click += label4_Click;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(500, 229);
+            label3.Name = "label3";
+            label3.Size = new Size(400, 49);
+            label3.TabIndex = 9;
+            label3.Text = "Learn without limits";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // HomeForm
             // 
@@ -88,8 +87,8 @@
             BackColor = Color.White;
             ClientSize = new Size(1150, 600);
             Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
@@ -102,8 +101,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label label1;
         private Label label2;
         private Label label4;
+        private Label label3;
     }
 }

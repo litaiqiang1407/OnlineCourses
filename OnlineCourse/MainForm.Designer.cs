@@ -111,7 +111,7 @@
             btnAboutUs.Text = "About Us";
             btnAboutUs.TextAlign = ContentAlignment.MiddleLeft;
             btnAboutUs.UseVisualStyleBackColor = true;
-
+            btnAboutUs.Click += btnAboutUs_Click;
             // 
             // btnHelp
             // 
@@ -130,6 +130,7 @@
             btnHelp.Text = "Help";
             btnHelp.TextAlign = ContentAlignment.MiddleLeft;
             btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.Click += btnHelp_Click;
             // 
             // btnCourses
             // 
@@ -227,16 +228,15 @@
             panelChildForm.Name = "panelChildForm";
             panelChildForm.Size = new Size(1150, 660);
             panelChildForm.TabIndex = 2;
-
             // 
             // label4
             // 
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(500, 330);
+            label4.Location = new Point(500, 329);
             label4.Name = "label4";
-            label4.Size = new Size(450, 60);
+            label4.Size = new Size(450, 41);
             label4.TabIndex = 8;
             label4.Text = "Skills for your present  and your future.";
             label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -256,9 +256,9 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(500, 280);
+            label3.Location = new Point(500, 289);
             label3.Name = "label3";
-            label3.Size = new Size(400, 60);
+            label3.Size = new Size(400, 49);
             label3.TabIndex = 6;
             label3.Text = "Learn without limits";
             label3.TextAlign = ContentAlignment.MiddleLeft;
@@ -360,7 +360,6 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
-
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeApp).EndInit();
             panel2.ResumeLayout(false);

@@ -59,5 +59,16 @@ namespace OnlineCourse
             openChildForm(new CoursesAdminForm());
 
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            openChildForm(new HelpForm());
+        }
+
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AboutUsForm());
+
+        }
     }
 }

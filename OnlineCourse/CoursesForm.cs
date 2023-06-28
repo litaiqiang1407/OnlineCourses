@@ -87,8 +87,6 @@ namespace OnlineCourse
         {
             filterCategorySearch();
         }
-
-
         private void CoursesDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             panelInforCourse.BackgroundImage = null;

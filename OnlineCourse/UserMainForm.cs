@@ -42,7 +42,7 @@ namespace OnlineCourse
             }
         }
 
-      
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             openChildForm(new HomeForm());
@@ -51,6 +51,17 @@ namespace OnlineCourse
         private void btnCourses_Click(object sender, EventArgs e)
         {
             openChildForm(new CoursesUserForm());
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            openChildForm(new HelpForm());
+        }
+
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            openChildForm(new AboutUsForm());
+
         }
     }
 }

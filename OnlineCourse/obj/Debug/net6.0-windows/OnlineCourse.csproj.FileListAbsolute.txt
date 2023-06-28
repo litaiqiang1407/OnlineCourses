@@ -35,3 +35,5 @@ D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\runtimes\win-x86\native\sn
 D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.CoursesUserForm.resources
+D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.HelpForm.resources
+D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.AboutUsForm.resources

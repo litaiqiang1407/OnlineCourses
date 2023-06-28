@@ -40,8 +40,8 @@
             progressBar = new CircularProgressBar.CircularProgressBar();
             panelChildForm = new Panel();
             label4 = new Label();
-            label2 = new Label();
             label3 = new Label();
+            label2 = new Label();
             pictureBox2 = new PictureBox();
             panelChildFormMain = new Panel();
             label1 = new Label();
@@ -112,6 +112,7 @@
             btnAboutUs.Text = "About Us";
             btnAboutUs.TextAlign = ContentAlignment.MiddleLeft;
             btnAboutUs.UseVisualStyleBackColor = true;
+            btnAboutUs.Click += btnAboutUs_Click;
             // 
             // btnHelp
             // 
@@ -130,6 +131,7 @@
             btnHelp.Text = "Help";
             btnHelp.TextAlign = ContentAlignment.MiddleLeft;
             btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.Click += btnHelp_Click;
             // 
             // btnCourses
             // 
@@ -218,8 +220,8 @@
             // 
             panelChildForm.BackColor = Color.White;
             panelChildForm.Controls.Add(label4);
-            panelChildForm.Controls.Add(label2);
             panelChildForm.Controls.Add(label3);
+            panelChildForm.Controls.Add(label2);
             panelChildForm.Controls.Add(pictureBox2);
             panelChildForm.Controls.Add(panelChildFormMain);
             panelChildForm.Dock = DockStyle.Fill;
@@ -227,19 +229,28 @@
             panelChildForm.Name = "panelChildForm";
             panelChildForm.Size = new Size(1150, 660);
             panelChildForm.TabIndex = 3;
-
             // 
             // label4
             // 
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(500, 330);
+            label4.Location = new Point(500, 329);
             label4.Name = "label4";
-            label4.Size = new Size(450, 60);
-            label4.TabIndex = 8;
+            label4.Size = new Size(450, 41);
+            label4.TabIndex = 10;
             label4.Text = "Skills for your present  and your future.";
             label4.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(500, 289);
+            label3.Name = "label3";
+            label3.Size = new Size(400, 49);
+            label3.TabIndex = 9;
+            label3.Text = "Learn without limits";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -252,16 +263,6 @@
             label2.TabIndex = 7;
             label2.Text = "TaiKun - Online Courses - CuongLT <3";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(500, 280);
-            label3.Name = "label3";
-            label3.Size = new Size(400, 60);
-            label3.TabIndex = 6;
-            label3.Text = "Learn without limits";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBox2
             // 
@@ -368,14 +369,14 @@
         private Panel panel3;
         private CircularProgressBar.CircularProgressBar progressBar;
         private Panel panelChildForm;
-        private Label label4;
         private Label label2;
-        private Label label3;
         private PictureBox pictureBox2;
         private Panel panelChildFormMain;
         private Label nameHome;
         private PictureBox logoHome;
         private Label label1;
         private PictureBox pictureBox1;
+        private Label label4;
+        private Label label3;
     }
 }
