@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoursesAdminForm));
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label2 = new Label();
             btnSearch = new Button();
             inputSearch = new TextBox();
@@ -42,7 +42,6 @@
             btnUpdate = new Button();
             btnDelete = new Button();
             label3 = new Label();
-            inputID = new TextBox();
             inputName = new TextBox();
             label4 = new Label();
             inputCategory = new TextBox();
@@ -55,6 +54,7 @@
             filterCategory = new ComboBox();
             btnRefresh = new Button();
             btnReset = new Button();
+            valueID = new Label();
             ((System.ComponentModel.ISupportInitialize)CoursesDGV).BeginInit();
             SuspendLayout();
             // 
@@ -91,6 +91,7 @@
             inputSearch.Location = new Point(135, 62);
             inputSearch.Margin = new Padding(3, 50, 5, 3);
             inputSearch.Name = "inputSearch";
+            inputSearch.PlaceholderText = "Search for All";
             inputSearch.Size = new Size(750, 27);
             inputSearch.TabIndex = 0;
             inputSearch.KeyDown += inputSearch_KeyDown;
@@ -113,23 +114,23 @@
             CoursesDGV.BackgroundColor = Color.WhiteSmoke;
             CoursesDGV.BorderStyle = BorderStyle.None;
             CoursesDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle5.SelectionForeColor = Color.DimGray;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle1.SelectionForeColor = Color.DimGray;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             CoursesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            CoursesDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            CoursesDGV.DefaultCellStyle = dataGridViewCellStyle2;
             CoursesDGV.EnableHeadersVisualStyles = false;
             CoursesDGV.GridColor = Color.FromArgb(67, 179, 217);
             CoursesDGV.Location = new Point(400, 161);
@@ -137,22 +138,22 @@
             CoursesDGV.Name = "CoursesDGV";
             CoursesDGV.ReadOnly = true;
             CoursesDGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            CoursesDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            CoursesDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             CoursesDGV.RowHeadersVisible = false;
             CoursesDGV.RowHeadersWidth = 51;
             CoursesDGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.ForeColor = Color.Gray;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(134, 223, 255);
-            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
-            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.ForeColor = Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(134, 223, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
             CoursesDGV.RowTemplate.Height = 29;
             CoursesDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CoursesDGV.Size = new Size(700, 410);
@@ -219,15 +220,6 @@
             label3.TabIndex = 17;
             label3.Text = "ID";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // inputID
-            // 
-            inputID.BackColor = Color.FromArgb(224, 224, 224);
-            inputID.Location = new Point(50, 180);
-            inputID.Name = "inputID";
-            inputID.Size = new Size(312, 27);
-            inputID.TabIndex = 1;
-            inputID.KeyDown += inputID_KeyDown;
             // 
             // inputName
             // 
@@ -328,13 +320,13 @@
             filterCategory.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             filterCategory.ForeColor = Color.FromArgb(67, 179, 217);
             filterCategory.FormattingEnabled = true;
-            filterCategory.Items.AddRange(new object[] { "IT & Software", "Business", "Lifestyle", "Design", "Marketing" });
             filterCategory.Location = new Point(485, 113);
             filterCategory.Margin = new Padding(3, 15, 3, 3);
             filterCategory.Name = "filterCategory";
             filterCategory.Size = new Size(150, 28);
+            filterCategory.Sorted = true;
             filterCategory.TabIndex = 27;
-            filterCategory.Text = "Category";
+            filterCategory.Text = "Categories";
             filterCategory.SelectedIndexChanged += filterCategory_SelectedIndexChanged;
             // 
             // btnRefresh
@@ -369,12 +361,23 @@
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
+            // valueID
+            // 
+            valueID.BackColor = Color.FromArgb(224, 224, 224);
+            valueID.BorderStyle = BorderStyle.Fixed3D;
+            valueID.ForeColor = SystemColors.WindowText;
+            valueID.Location = new Point(50, 180);
+            valueID.Name = "valueID";
+            valueID.Size = new Size(312, 27);
+            valueID.TabIndex = 31;
+            // 
             // CoursesAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1150, 600);
+            Controls.Add(valueID);
             Controls.Add(btnReset);
             Controls.Add(btnRefresh);
             Controls.Add(filterCategory);
@@ -387,7 +390,6 @@
             Controls.Add(label5);
             Controls.Add(inputName);
             Controls.Add(label4);
-            Controls.Add(inputID);
             Controls.Add(label3);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -418,7 +420,6 @@
         private Button btnUpdate;
         private Button btnDelete;
         private Label label3;
-        private TextBox inputID;
         private TextBox inputName;
         private Label label4;
         private TextBox inputCategory;
@@ -431,5 +432,6 @@
         private ComboBox filterCategory;
         private Button btnRefresh;
         private Button btnReset;
+        private Label valueID;
     }
 }

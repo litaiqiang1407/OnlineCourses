@@ -16,7 +16,7 @@ namespace OnlineCourse
         {
             InitializeComponent();
         }
-       
+
         private void closeApp_Click(object sender, EventArgs e)
         {
             DialogResult closeMessage = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -44,18 +44,18 @@ namespace OnlineCourse
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            if ( inputEmail.Text == "" && inputPassword.Text == "" )
+            if (inputEmail.Text == "" && inputPassword.Text == "")
             {
                 MessageBox.Show("Please Enter Your Information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 inputEmail.Focus();
             }
-            else if ( inputEmail.Text == "")
+            else if (inputEmail.Text == "")
             {
                 MessageBox.Show("Please Enter Your Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 inputEmail.Focus();
 
             }
-            else if ( inputPassword.Text == "")
+            else if (inputPassword.Text == "")
             {
                 MessageBox.Show("Please Enter Your Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 inputPassword.Focus();
@@ -65,7 +65,7 @@ namespace OnlineCourse
                 ChoiceForm choiceForm = new ChoiceForm();
                 choiceForm.Show();
             }
-            
+
         }
         private void labelSignUp_Click(object sender, EventArgs e)
         {

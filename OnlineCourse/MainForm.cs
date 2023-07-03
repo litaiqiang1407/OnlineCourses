@@ -15,6 +15,7 @@ namespace OnlineCourse
         public MainForm()
         {
             InitializeComponent();
+            btnHome.BackColor = Color.FromArgb(92, 92, 92);
         }
 
         private void closeApp_Click(object sender, EventArgs e)
@@ -56,10 +57,6 @@ namespace OnlineCourse
             childForm.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            openChildForm(new HomeForm());
-        }
 
         private void logoHome_Click(object sender, EventArgs e)
         {
@@ -71,21 +68,40 @@ namespace OnlineCourse
             openChildForm(new HomeForm());
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openChildForm(new HomeForm());
+            btnHome.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
+        }
+
         private void btnCourses_Click(object sender, EventArgs e)
         {
             openChildForm(new CoursesForm());
+            btnCourses.BackColor = Color.FromArgb(92, 92, 92);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             openChildForm(new HelpForm());
-
+            btnHelp.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
         }
 
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
             openChildForm(new AboutUsForm());
-
+            btnAboutUs.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
         }
     }
 }

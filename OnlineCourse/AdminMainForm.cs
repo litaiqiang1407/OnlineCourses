@@ -15,6 +15,7 @@ namespace OnlineCourse
         public AdminMainForm()
         {
             InitializeComponent();
+            btnHome.BackColor = Color.FromArgb(92, 92, 92);
         }
 
         // Close App
@@ -51,24 +52,49 @@ namespace OnlineCourse
         private void btnHome_Click(object sender, EventArgs e)
         {
             openChildForm(new HomeForm());
+            btnHome.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
         }
 
         // Display CoursesAdminForm
         private void btnCourses_Click(object sender, EventArgs e)
         {
             openChildForm(new CoursesAdminForm());
-
+            btnCourses.BackColor = Color.FromArgb(92, 92, 92);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
             openChildForm(new HelpForm());
+            btnHelp.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
+            btnAboutUs.BackColor = Color.FromArgb(18, 18, 18);
         }
 
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
             openChildForm(new AboutUsForm());
+            btnAboutUs.BackColor = Color.FromArgb(92, 92, 92);
+            btnCourses.BackColor = Color.FromArgb(18, 18, 18);
+            btnHelp.BackColor = Color.FromArgb(18, 18, 18);
+            btnHome.BackColor = Color.FromArgb(18, 18, 18);
 
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult messageLogOut = MessageBox.Show("Do you wan to log out?", "Log out Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (messageLogOut == DialogResult.Yes)
+            {
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+            }
         }
     }
 }

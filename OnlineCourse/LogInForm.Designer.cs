@@ -142,7 +142,6 @@
             pictureBox1.Size = new Size(250, 250);
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
-           
             // 
             // closeApp
             // 

@@ -102,7 +102,7 @@
             filterCategory.Name = "filterCategory";
             filterCategory.Size = new Size(150, 28);
             filterCategory.TabIndex = 42;
-            filterCategory.Text = "Category";
+            filterCategory.Text = "Categories";
             filterCategory.SelectedIndexChanged += filterCategory_SelectedIndexChanged;
             // 
             // CoursesDGV
@@ -159,6 +159,7 @@
             inputSearch.Location = new Point(136, 62);
             inputSearch.Margin = new Padding(3, 50, 5, 3);
             inputSearch.Name = "inputSearch";
+            inputSearch.PlaceholderText = "Search for All";
             inputSearch.Size = new Size(750, 27);
             inputSearch.TabIndex = 35;
             inputSearch.KeyDown += inputSearch_KeyDown;

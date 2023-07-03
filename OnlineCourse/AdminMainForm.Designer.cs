@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             panel1 = new Panel();
             closeApp = new PictureBox();
@@ -44,10 +45,12 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             panelChildFormMain = new Panel();
+            btnLogOut = new Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             nameHome = new Label();
             logoHome = new PictureBox();
+            toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeApp).BeginInit();
             panel2.SuspendLayout();
@@ -277,6 +280,7 @@
             // panelChildFormMain
             // 
             panelChildFormMain.BackColor = Color.White;
+            panelChildFormMain.Controls.Add(btnLogOut);
             panelChildFormMain.Controls.Add(label1);
             panelChildFormMain.Controls.Add(pictureBox1);
             panelChildFormMain.Controls.Add(nameHome);
@@ -287,12 +291,32 @@
             panelChildFormMain.Size = new Size(1150, 60);
             panelChildFormMain.TabIndex = 0;
             // 
+            // btnLogOut
+            // 
+            btnLogOut.BackgroundImage = (Image)resources.GetObject("btnLogOut.BackgroundImage");
+            btnLogOut.BackgroundImageLayout = ImageLayout.Zoom;
+            btnLogOut.FlatAppearance.BorderColor = Color.FromArgb(67, 179, 217);
+            btnLogOut.FlatAppearance.BorderSize = 2;
+            btnLogOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(92, 92, 92);
+            btnLogOut.FlatAppearance.MouseOverBackColor = Color.FromArgb(92, 92, 92);
+            btnLogOut.FlatStyle = FlatStyle.Flat;
+            btnLogOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogOut.ForeColor = Color.FromArgb(67, 179, 217);
+            btnLogOut.Location = new Point(1060, 5);
+            btnLogOut.Margin = new Padding(3, 3, 40, 3);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(50, 50);
+            btnLogOut.TabIndex = 5;
+            toolTip1.SetToolTip(btnLogOut, "Log out");
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
+            // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(67, 179, 217);
-            label1.Location = new Point(1038, 5);
-            label1.Margin = new Padding(0, 0, 40, 0);
+            label1.Location = new Point(975, 5);
+            label1.Margin = new Padding(0, 0, 10, 0);
             label1.Name = "label1";
             label1.Size = new Size(72, 50);
             label1.TabIndex = 3;
@@ -302,7 +326,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(985, 5);
+            pictureBox1.Location = new Point(922, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -331,6 +355,13 @@
             logoHome.SizeMode = PictureBoxSizeMode.Zoom;
             logoHome.TabIndex = 0;
             logoHome.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.ForeColor = Color.FromArgb(67, 179, 217);
+            toolTip1.InitialDelay = 100;
+            toolTip1.ReshowDelay = 100;
             // 
             // AdminMainForm
             // 
@@ -378,5 +409,7 @@
         private PictureBox pictureBox1;
         private Label label4;
         private Label label3;
+        private Button btnLogOut;
+        private ToolTip toolTip1;
     }
 }

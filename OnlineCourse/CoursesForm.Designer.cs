@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoursesForm));
             label2 = new Label();
             CoursesDGV = new DataGridView();
@@ -77,14 +77,14 @@
             CoursesDGV.BackgroundColor = Color.WhiteSmoke;
             CoursesDGV.BorderStyle = BorderStyle.None;
             CoursesDGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(67, 179, 217);
-            dataGridViewCellStyle1.SelectionForeColor = Color.DimGray;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(67, 179, 217);
+            dataGridViewCellStyle3.SelectionForeColor = Color.DimGray;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            CoursesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             CoursesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CoursesDGV.EnableHeadersVisualStyles = false;
             CoursesDGV.GridColor = Color.FromArgb(67, 179, 217);
@@ -94,11 +94,11 @@
             CoursesDGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             CoursesDGV.RowHeadersVisible = false;
             CoursesDGV.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.ForeColor = Color.Gray;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(134, 223, 255);
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.ForeColor = Color.Gray;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(134, 223, 255);
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            CoursesDGV.RowsDefaultCellStyle = dataGridViewCellStyle4;
             CoursesDGV.RowTemplate.Height = 29;
             CoursesDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CoursesDGV.Size = new Size(700, 410);
@@ -123,6 +123,7 @@
             inputSearch.Location = new Point(136, 62);
             inputSearch.Margin = new Padding(3, 50, 5, 3);
             inputSearch.Name = "inputSearch";
+            inputSearch.PlaceholderText = "Search for All";
             inputSearch.Size = new Size(750, 27);
             inputSearch.TabIndex = 0;
             inputSearch.KeyDown += inputSearch_KeyDown;
@@ -170,7 +171,7 @@
             filterCategory.Name = "filterCategory";
             filterCategory.Size = new Size(150, 28);
             filterCategory.TabIndex = 33;
-            filterCategory.Text = "Category";
+            filterCategory.Text = "Categories";
             filterCategory.SelectedIndexChanged += filterCategory_SelectedIndexChanged;
             // 
             // label8
