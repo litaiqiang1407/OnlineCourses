@@ -39,6 +39,8 @@
             label5 = new Label();
             pictureBox1 = new PictureBox();
             closeApp = new PictureBox();
+            errorEmail = new Label();
+            errorPassword = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)closeApp).BeginInit();
             SuspendLayout();
@@ -71,7 +73,7 @@
             btnLogIn.FlatStyle = FlatStyle.Flat;
             btnLogIn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogIn.ForeColor = Color.White;
-            btnLogIn.Location = new Point(100, 550);
+            btnLogIn.Location = new Point(100, 560);
             btnLogIn.Name = "btnLogIn";
             btnLogIn.Size = new Size(300, 40);
             btnLogIn.TabIndex = 2;
@@ -82,10 +84,11 @@
             // inputEmail
             // 
             inputEmail.Location = new Point(100, 381);
-            inputEmail.Margin = new Padding(3, 10, 3, 3);
+            inputEmail.Margin = new Padding(0, 10, 0, 0);
             inputEmail.Name = "inputEmail";
             inputEmail.Size = new Size(300, 27);
             inputEmail.TabIndex = 0;
+            inputEmail.Tag = "";
             inputEmail.KeyDown += inputEmail_KeyDown;
             // 
             // label3
@@ -116,6 +119,7 @@
             // inputPassword
             // 
             inputPassword.Location = new Point(100, 452);
+            inputPassword.Margin = new Padding(3, 0, 0, 0);
             inputPassword.Name = "inputPassword";
             inputPassword.PasswordChar = '●';
             inputPassword.Size = new Size(300, 27);
@@ -127,7 +131,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(67, 179, 217);
-            label5.Location = new Point(100, 482);
+            label5.Location = new Point(100, 496);
             label5.Name = "label5";
             label5.Size = new Size(169, 28);
             label5.TabIndex = 7;
@@ -155,12 +159,38 @@
             closeApp.TabStop = false;
             closeApp.Click += closeApp_Click;
             // 
+            // errorEmail
+            // 
+            errorEmail.AutoSize = true;
+            errorEmail.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            errorEmail.ForeColor = Color.Red;
+            errorEmail.Location = new Point(100, 408);
+            errorEmail.Margin = new Padding(0);
+            errorEmail.Name = "errorEmail";
+            errorEmail.Size = new Size(210, 17);
+            errorEmail.TabIndex = 10;
+            errorEmail.Text = "Please Enter A Valid Email Address";
+            // 
+            // errorPassword
+            // 
+            errorPassword.AutoSize = true;
+            errorPassword.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            errorPassword.ForeColor = Color.Red;
+            errorPassword.Location = new Point(100, 479);
+            errorPassword.Margin = new Padding(0);
+            errorPassword.Name = "errorPassword";
+            errorPassword.Size = new Size(242, 17);
+            errorPassword.TabIndex = 11;
+            errorPassword.Text = "Password Must Be At Least 8 Characters";
+            // 
             // LogInForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(500, 700);
+            Controls.Add(errorPassword);
+            Controls.Add(errorEmail);
             Controls.Add(closeApp);
             Controls.Add(pictureBox1);
             Controls.Add(label5);
@@ -193,5 +223,7 @@
         private Label label5;
         private PictureBox pictureBox1;
         private PictureBox closeApp;
+        private Label errorEmail;
+        private Label errorPassword;
     }
 }

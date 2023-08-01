@@ -14,7 +14,9 @@ namespace OnlineCourse
 {
     public partial class CoursesUserForm : Form
     {
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\OnlineCourse\OnlineCoursesDB\DBCourses.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+                                                AttachDbFilename=D:\OnlineCourse\OnlineCoursesDB\DBCourses.mdf;
+                                                Integrated Security=True;Connect Timeout=30");
 
         public CoursesUserForm()
         {
@@ -84,13 +86,13 @@ namespace OnlineCourse
             valueSearch();
         }
 
+        // This method is executed when the btnRefresh button is clicked 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            populate();
-            inputSearch.Clear();
-            inputSearch.Focus();
-            filterCategory.Text = "Categories";
-
+            populate(); // populates the data grid view with the data from the database
+            inputSearch.Clear(); // clears the text in the inputSearch textbox
+            inputSearch.Focus(); //  sets the focus to the inputSearch textbox
+            filterCategory.Text = "Categories"; // sets the text of the filterCategory combobox to “Categories”
         }
 
         public void filterCategorySearch()

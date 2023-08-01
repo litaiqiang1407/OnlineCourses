@@ -10,26 +10,36 @@ using System.Windows.Forms;
 
 namespace OnlineCourse
 {
+    // A class that inherits from the Form class
     public partial class MainForm : Form
     {
+        // A constructor that initializes the form components
         public MainForm()
         {
             InitializeComponent();
+            // Set the background color of the home button
             btnHome.BackColor = Color.FromArgb(92, 92, 92);
         }
 
+        // An event handler method for the close app button click event
         private void closeApp_Click(object sender, EventArgs e)
         {
-            DialogResult closeMessage = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            // Show a message box asking the user to confirm exit
+            DialogResult closeMessage = MessageBox.Show("Do you want to exit?", "Exit", 
+                                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            // If the user chooses yes, close the application
             if (closeMessage == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
 
+        // An event handler method for the log in button click event
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            // Create an object of the LogInForm class
             LogInForm logInForm = new LogInForm();
+            // Show the log in form
             logInForm.Show();
         }
 
@@ -105,3 +115,4 @@ namespace OnlineCourse
         }
     }
 }
+

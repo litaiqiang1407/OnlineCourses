@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace OnlineCourse
 {
+    // A class that inherits from the Form class
     public partial class HomeForm : Form
     {
+        // A constructor that initializes the form components
         public HomeForm()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
