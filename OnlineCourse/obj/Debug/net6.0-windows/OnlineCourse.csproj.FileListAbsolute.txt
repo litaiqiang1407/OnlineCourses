@@ -4,7 +4,6 @@ D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\OnlineCourse.runtimeconfig
 D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\OnlineCourse.dll
 D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\OnlineCourse.pdb
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.csproj.AssemblyReference.cache
-D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.Form1.resources
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.csproj.GenerateResource.cache
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.GeneratedMSBuildEditorConfig.editorconfig
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.AssemblyInfoInputs.cache
@@ -37,3 +36,4 @@ D:\OnlineCourse\OnlineCourse\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreap
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.CoursesUserForm.resources
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.HelpForm.resources
 D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.AboutUsForm.resources
+D:\OnlineCourse\OnlineCourse\obj\Debug\net6.0-windows\OnlineCourse.ProgressForm.resources
